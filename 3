@@ -1,0 +1,13 @@
+def text_Diana():
+    text = input("Enter a text: ")
+
+    #формує множину з унікальних літер у тексті
+    letters_set = set(char for char in text if char.isalpha())
+
+    #pахує кількість розділових знаків у тексті (кожен символ окрім: букв, цифр або пробілів)
+    punctuation = sum(1 for char in text if not char.isalnum() and not char.isspace())
+
+    print("Unique letters:", letters_set)
+    print("Punctuation marks:", punctuation)
+    return letters_set, punctuation
+text_Diana()
